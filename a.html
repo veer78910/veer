@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stop Bullying</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        color: #0066cc;
+      }
+      .bullying {
+        background-color: #ff9999;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .bullying h2 {
+        color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Stop Bullying</h1>
+
+    <div class="bullying">
+      <h2>What is bullying?</h2>
+      <p>Bullying is the repeated and intentional use of words or actions to hurt, intimidate, or humiliate another person.</p>
+    </div>
+
+    <div class="bullying">
+      <h2>The effects of bullying</h2>
+      <p>Bullying can have serious and long-lasting effects on a person's mental and emotional well-being. It can lead to anxiety, depression, low self-esteem, and even suicidal thoughts or behaviors.</p>
+    </div>
+
+    <div class="bullying">
+      <h2>How to prevent bullying</h2>
+      <ul>
+        <li>Promote kindness and respect</li>
+        <li>Encourage bystander intervention</li>
+        <li>Foster open communication</li>
+      </ul>
+    </div>
+
+    <div class="bullying">
+      <h2>Resources and support</h2>
+      <ul>
+        <li><a href="https://www.stopbullying.gov/">StopBullying.gov</a></li>
+        <li><a href="https://www.pacer.org/bullying/">PACER National Bullying Prevention Center</a></li>
+        <li><a href="https://www.stompoutbullying.org/">STOMP Out Bullying</a></li>
+      </ul>
+    </div>
+
+    <script>
+      // Personal story
+      var story = prompt("Have you or someone you know experienced bullying? Please share your story.");
+      
+      if (story) {
+        var storyDiv = document.createElement("div");
+        storyDiv.className = "bullying";
+        var storyHeading = document.createElement("h2");
+        storyHeading.textContent = "Personal story";
+        var storyParagraph = document.createElement("p");
+        storyParagraph.textContent = story;
+        storyDiv.appendChild(storyHeading);
+        storyDiv.appendChild(storyParagraph);
+        document.body.appendChild(storyDiv);
+      }
+    </script>
+  </body>
+</html>
