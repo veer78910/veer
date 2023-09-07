@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title> Split string into array of letter</title>
+
+<style>
+     body {
+        background-color: orange;
+        color: white;
+        text-align: center;
+      }
+      input, button, p {
+        margin-top: 20px;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+      input:focus,button:focus{
+          outline:none;
+      }
+      button{
+          background-color:white;
+          color:orange;
+          cursor:pointer;
+      }
+      </style>
+   </head>
+   <body>
+        <input type="text" id="myInput" placeholder="Enter text...">
+    <button onclick="splitInputIntoLetters()">Split into Letters</button>
+    <p id="output"></p>
+    <script>
+        function
+        splitStringIntoLetter(str) {
+            const lettersArray;=
+str.split('');
+return lettersArray;
+            }
+             function splitInputIntoLetters() {
+        const inputText = document.getElementById("myInput").value;
+        const letters = splitStringIntoLetters(inputText);
+        document.getElementById("output").innerHTML = letters.join(", ");
+      }
+    </script>
+  </body>
+</html>
