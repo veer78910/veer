@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+
+      body {
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: blue;
+      }
+    </style>
+    <script>
+      function sayHello() {
+        const name = document.getElementById("name-input").value;
+        alert(`Hello, ${name}!`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to my page</h1>
+    <label for="name-input">Enter your name:</label>
+    <input type="text" id="name-input">
+    <button onclick="sayHello()">Say hello</button>
+  </body>
+</html>
