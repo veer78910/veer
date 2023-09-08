@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Creative Program</title>
+    <style>
+      body {
+        background-color: yellow;
+      }
+      h1 {
+        color: purple;
+      }
+      p {
+        font-style: cursive;
+      }
+    </style>
+    <script>
+      function changeColor() {
+        var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+        var randomIndex = Math.floor(Math.random() * colors.length);
+        var randomColor = colors[randomIndex];
+        document.body.style.backgroundColor = randomColor;
+      }
+
+      function displayQuote() {
+        var quotes = [
+          "The best way to predict your future is to create it. - Abraham Lincoln",
+          "Believe you can and you're halfway there. - Theodore Roosevelt",
+          "Strive not to be a success, but rather to be of value. - Albert Einstein",
+          "You miss 100% of the shots you don't take. - Wayne Gretzky",
+          "I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison"
+        ];
+        var randomIndex = Math.floor(Math.random() * quotes.length);
+        var randomQuote = quotes[randomIndex];
+        var quoteElement = document.getElementById("quote");
+        quoteElement.innerHTML = randomQuote;
+      }
+
+      function displayImage() {
+        var images = [
+          "https://picsum.photos/200/300",
+          "https://picsum.photos/300/200",
+          "https://picsum.photos/400/400",
+          "https://picsum.photos/500/300",
+          "https://picsum.photos/300/500"
+        ];
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var randomImage = images[randomIndex];
+        var imageElement = document.getElementById("image");
+        imageElement.src = randomImage;
+      }
+
+      function displayRandomImageAfterDelay() {
+        var delayInMilliseconds = 5000; // 5 seconds
+        setTimeout(function() {
+          displayImage();
+          displayRandomImageAfterDelay();
+        }, delayInMilliseconds);
+      }
+    </script>
+  </head>
+  <body onload="displayRandomImageAfterDelay()">
+    <h1>Interactive Program</h1>
+    <button onclick="changeColor()">Click me to change the background color!</button>
+    <br><br>
+    <button onclick="displayQuote()">Click me to display a random quote!</button>
+    <p id="quote"></p>
+    <img id="image" src="">
+  </body>
+</html>
