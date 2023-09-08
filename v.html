@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parameterize a String</title>
+    <style>
+      h1 {
+        color: navy;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Parameterize a String</h1>
+    <p id="output"></p>
+    <script>
+      function parameterizeString(str, params) {
+        for (let key in params) {
+          let placeholder = ':' + key;
+          let value = params[key];
+          str = str.replace(new RegExp(placeholder, 'g'), value);
+        }
+        return str;
+      }
+
+
+      const str = "Hello, :name! Today is :day.";
+      const params = { name: "John", day: "Monday" };
+      const output = document.getElementById("output");
+      output.textContent = parameterizeString(str, params);
+    </script>
+  </body>
+</html>
